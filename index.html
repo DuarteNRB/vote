@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Vote Application</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                <h1>HOW DO YOU FEEL?</h1>
+            </div>
+            <div class="main">
+                <div class="left-row">
+                    <div class="emotion" onclick="vote('happy')">
+                        <img src="assets/Emotion1.svg" alt="happy">
+                        <h1>Happy</h1>
+                    </div>
+                    <div class="emotion" onclick="vote('excited')">
+                        <img src="assets/Emotion1.svg" alt="excited">
+                        <h1>Excited</h1>
+                    </div>
+                    <div class="emotion" onclick="vote('sad')">
+                        <img src="assets/Emotion1.svg" alt="sad">
+                        <h1>Sad</h1>
+                    </div>
+                </div>
+                <div class="right-row">
+                    <div class="emotion" onclick="vote('angry')">
+                        <img src="assets/Emotion1.svg" alt="angry">
+                        <h1>Angry</h1>
+                    </div>
+                    <div class="emotion" onclick="vote('sick')">
+                        <img src="assets/Emotion1.svg" alt="sick">
+                        <h1>Sick</h1>
+                    </div>
+                    <div class="emotion" onclick="vote('loving')">
+                        <img src="assets/Emotion1.svg" alt="loving">
+                        <h1>Loving</h1>
+                    </div>
+                </div>
+            </div>
+            <section class="vote-counter">
+                <div class="counter">
+                    <h2>Vote Counts:</h2>
+                    <p id="happyCount">Happy: 0</p>
+                    <p id="excitedCount">Excited: 0</p>
+                    <p id="sadCount">Sad: 0</p>
+                    <p id="angryCount">Angry: 0</p>
+                    <p id="sickCount">Sick: 0</p>
+                    <p id="lovingCount">Loving: 0</p>
+                </div>
+                <div class="voted">
+                    <h2>Most Voted Emotion:</h2>
+                    <p id="mostVoted">None</p>
+                </div>
+            </section>
+            
+        </nav>
+    </header>
+
+    <script>
+        // Initialize vote counts
+        let happyCount = 0;
+        let excitedCount = 0;
+        let sadCount = 0;
+        let angryCount = 0;
+        let sickCount = 0;
+        let lovingCount = 0;
+
+        // Function to handle votes
+        function vote(emotion) {
+            switch (emotion) {
+                case 'happy':
+                    happyCount++;
+                    document.getElementById('happyCount').innerText = 'Happy: ' + happyCount;
+                    break;
+                case 'excited':
+                    excitedCount++;
+                    document.getElementById('excitedCount').innerText = 'Excited: ' + excitedCount;
+                    break;
+                case 'sad':
+                    sadCount++;
+                    document.getElementById('sadCount').innerText = 'Sad: ' + sadCount;
+                    break;
+                case 'angry':
+                    angryCount++;
+                    document.getElementById('angryCount').innerText = 'Angry: ' + angryCount;
+                    break;
+                case 'sick':
+                    sickCount++;
+                    document.getElementById('sickCount').innerText = 'Sick: ' + sickCount;
+                    break;
+                case 'loving':
+                    lovingCount++;
+                    document.getElementById('lovingCount').innerText = 'Loving: ' + lovingCount;
+                    break;
+                default:
+                    console.log('Invalid emotion');
+            }
+        
+        // Update most voted emotion
+        updateMostVoted();
+        }
+
+        // Function to update most voted emotion
+        function updateMostVoted() {
+        const voteCounts = [happyCount, excitedCount, sadCount, angryCount, sickCount, lovingCount];
+        const emotions = ['Happy', 'Excited', 'Sad', 'Angry', 'Sick', 'Loving'];
+
+        // Find the index of the emotion with the maximum votes
+        const mostVotedIndex = voteCounts.indexOf(Math.max(...voteCounts));
+
+        // Display the most voted emotion
+        document.getElementById('mostVoted').innerText = mostVotedIndex !== -1 ? emotions[mostVotedIndex] : 'None';
+        }
+
+    </script>
+</body>
+</html>
