@@ -21,7 +21,7 @@
             <div class="main">
                 <div class="left-row">
                     <div class="emotion" onclick="vote('happy')">
-                        <img src="assets/Emotion1.svg" alt="happy">
+                        <img src="assets/free-images.jpg" alt="happy">
                         <h1>Happy</h1>
                     </div>
                     <div class="emotion" onclick="vote('excited')">
@@ -60,69 +60,12 @@
                 </div>
                 <div class="voted">
                     <h2>Most Voted Emotion:</h2>
-                    <p id="mostVoted">None</p>
+                    <img src="" alt="" id="mostVoted" class="mostVoted">
                 </div>
             </section>
             
         </nav>
     </header>
-
-    <script>
-        // Initialize vote counts
-        let happyCount = 0;
-        let excitedCount = 0;
-        let sadCount = 0;
-        let angryCount = 0;
-        let sickCount = 0;
-        let lovingCount = 0;
-
-        // Function to handle votes
-        function vote(emotion) {
-            switch (emotion) {
-                case 'happy':
-                    happyCount++;
-                    document.getElementById('happyCount').innerText = 'Happy: ' + happyCount;
-                    break;
-                case 'excited':
-                    excitedCount++;
-                    document.getElementById('excitedCount').innerText = 'Excited: ' + excitedCount;
-                    break;
-                case 'sad':
-                    sadCount++;
-                    document.getElementById('sadCount').innerText = 'Sad: ' + sadCount;
-                    break;
-                case 'angry':
-                    angryCount++;
-                    document.getElementById('angryCount').innerText = 'Angry: ' + angryCount;
-                    break;
-                case 'sick':
-                    sickCount++;
-                    document.getElementById('sickCount').innerText = 'Sick: ' + sickCount;
-                    break;
-                case 'loving':
-                    lovingCount++;
-                    document.getElementById('lovingCount').innerText = 'Loving: ' + lovingCount;
-                    break;
-                default:
-                    console.log('Invalid emotion');
-            }
-        
-        // Update most voted emotion
-        updateMostVoted();
-        }
-
-        // Function to update most voted emotion
-        function updateMostVoted() {
-        const voteCounts = [happyCount, excitedCount, sadCount, angryCount, sickCount, lovingCount];
-        const emotions = ['Happy', 'Excited', 'Sad', 'Angry', 'Sick', 'Loving'];
-
-        // Find the index of the emotion with the maximum votes
-        const mostVotedIndex = voteCounts.indexOf(Math.max(...voteCounts));
-
-        // Display the most voted emotion
-        document.getElementById('mostVoted').innerText = mostVotedIndex !== -1 ? emotions[mostVotedIndex] : 'None';
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
