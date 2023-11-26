@@ -16,7 +16,7 @@
 .main{
     display: flex;
     flex-direction: row;
-    margin-top: 80px;
+    margin-top: 40px;
     gap: 20px;
 
 }
@@ -48,7 +48,7 @@
     align-items: center;
     text-align: center;
     img{
-        width: 40%;
+        height: 100px;
         align-items: center;
         background-color: rgb(103, 103, 103);
     }
@@ -65,6 +65,9 @@
     width: 130px;
 }
 
+//Ajusting the emojis Individually
+
+
 
 @media screen and (max-width: 430px){
     .counter{
@@ -75,7 +78,7 @@
 .vote-counter{
     color: white;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 70px;
     h2{
         font-size: 20px;
     }

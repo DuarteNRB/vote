@@ -47,7 +47,7 @@ updateMostVoted();
 function updateMostVoted() {
 const voteCounts = [happyCount, excitedCount, sadCount, angryCount, sickCount, lovingCount];
 const emotions = ['Happy', 'Excited', 'Sad', 'Angry', 'Sick', 'Loving'];
-const emotionsImages = ['assets/free-images.jpg',"assets/Emotion1.svg", "assets/Emotion1.svg", "assets/Emotion1.svg", "assets/Emotion1.svg", "assets/Emotion1.svg"];
+const emotionsImages = ['assets/Happy-Emoji.svg',"assets/Excited-Emoji.svg", "assets/Sad-Emoji.svg", "assets/Angry-Emoji.svg", "assets/Sick-Emoji.svg", "assets/Loving-Emoji.svg"];
 
 // Find the index of the emotion with the maximum votes
 const mostVotedIndex = voteCounts.indexOf(Math.max(...voteCounts));
