@@ -60,6 +60,10 @@
   background-color: rgb(103, 103, 103);
 }
 
+.mostVoted {
+  height: 220px;
+}
+
 @media screen and (max-width: 430px) {
   .counter {
     display: none;
@@ -72,10 +76,6 @@
 }
 .vote-counter h2 {
   font-size: 20px;
-}
-
-.mostVoted {
-  width: 400px;
 }
 
 @media screen and (min-width: 430px) {
