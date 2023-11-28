@@ -1,0 +1,28 @@
+/**
+ * custom.css
+ * Our customizations to the Bootstrap layout.
+ *
+ * @author Nathan Campos <nathan@innoveworkshop.com>
+ */
+
+main {
+    padding-top: 80px;
+}
+
+.poll-card {
+    max-width: 60em;
+}
+
+@media (max-width: 1199.98px) {
+    .poll-card {
+        margin-bottom: 2em;
+    }
+}
+
+.poll-card .list-group-item:hover {
+    background-color: var(--bs-gray-100);
+}
+
+.poll-card .list-group-item.voted {
+    background-color: #ddecff;
+}
