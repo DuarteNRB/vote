@@ -65,11 +65,6 @@
     width: 130px;
 }
 
-.mostVoted{
-    height: 220px;
-
-}
-
 //Ajusting the emojis Individually
 
 
@@ -89,7 +84,10 @@
     }
 }
 
+.mostVoted{
+    width: 400px;
 
+}
 
 @media screen and (min-width:430px){
     .left-row{
