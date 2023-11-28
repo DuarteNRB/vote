@@ -47,7 +47,8 @@ def get_poll_from_name(name):
 @app.route('/')
 def render_index():
     """Renders the main page template."""
-    return render_template('index.html', polls=poll_cache)
+    return app.send_static_file('index.html')
+    #return render_template('index.html', polls=poll_cache)
 
 
 @app.route('/poll/<name>')
