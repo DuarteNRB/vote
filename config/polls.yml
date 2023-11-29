@@ -1,0 +1,18 @@
+---
+polls:
+  - name: 'feeling'
+    title: 'How do you feel?'
+    desc: ''
+    options:
+      - label: 'Happy'
+        value: 'happy'
+      - label: 'Excited'
+        value: 'excited'
+      - label: 'Sad'
+        value: 'sad'
+      - label: 'Angry'
+        value: 'angry'
+      - label: 'Sick'
+        value: 'sick'
+      - label: 'Loving'
+        value: 'loving'
